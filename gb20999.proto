@@ -1,0 +1,75 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.example.protobuf";
+option java_outer_classname = "Gb20999Proto";
+
+
+service Gb20999Service {
+  // 相位上传
+  rpc phaseUpload (PhaseUploadRequest) returns (PhaseUploadResponse){
+  }
+  // 相位下载
+  rpc phaseDownload (PhaseDownloadRequest) returns (PhaseDownloadResponse){
+  }
+  // 方案上传
+  rpc planUpload (PlanUploadRequest) returns (PlanUploadResponse){
+  }
+  // 方案下载
+  rpc planDownload (PlanDownloadRequest) returns (PlanDownloadResponse){
+  }
+  // 阶段上传
+  rpc stageUpload (StageUploadRequest) returns (StageUploadResponse){
+  }
+  // 阶段下载
+  rpc stageDownload (StageDownloadRequest) returns (StageDownloadResponse){
+  }
+}
+
+message PhaseUploadRequest {
+  string crossId = 1;
+}
+
+message PhaseUploadResponse {
+  string reply = 1;
+}
+
+message PhaseDownloadRequest {
+  string crossId = 1;
+}
+
+message PhaseDownloadResponse {
+  bool result = 1;
+}
+
+message PlanUploadRequest {
+  string crossId = 1;
+}
+
+message PlanUploadResponse {
+  string reply = 1;
+}
+
+message PlanDownloadRequest {
+  string crossId = 1;
+}
+
+message PlanDownloadResponse {
+  bool result = 1;
+}
+
+message StageUploadRequest {
+  string crossId = 1;
+}
+
+message StageUploadResponse {
+  string reply = 1;
+}
+
+message StageDownloadRequest {
+  string crossId = 1;
+}
+
+message StageDownloadResponse {
+  bool result = 1;
+}
